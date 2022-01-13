@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Hello</title>
+    <!-- ---- CSS ---- -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- ---- VUE CDN--- -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <div class="input">
+            <label for="user-name">Inserisci il tuo nome</label>
+            <input name="user-name" v-model="userName">
+        </div>
+        <div class="input">
+            <label for="user-image">Inserisci l'indirizzo della tua immagine</label>
+            <input name="user-image" v-model="userImage">
+        </div>
+        <hr />
+        <h1>{{ titleMessage }}</h1>
+        <img :src="userImage" :class="userImageClass" :alt="userName"><br />
+        <span>Hello {{userName}}</span>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
